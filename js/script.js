@@ -1,6 +1,6 @@
 // Return all images from the site on the console
-const images = document.querySelectorAll('img')
-console.log(images)
+const imgs = document.querySelectorAll('img')
+console.log(imgs)
 
 // Return on the console only the images that start with the word image
 const animalImages = document.querySelectorAll('[src^="img/img"]')
