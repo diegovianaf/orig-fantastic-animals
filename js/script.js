@@ -12,7 +12,7 @@ console.log(internalLinks)
 
 // Select the first h2 inside of .animals-description
 const h2Animals = document.querySelector('.animals-description h2')
-console.log(firstAnimal)
+console.log(h2Animals)
 
 // Select the last p of the site
 const paragraphs = document.querySelectorAll('p')
