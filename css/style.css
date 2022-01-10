@@ -147,6 +147,7 @@ p, li, dd {
   margin-top: 2rem;
   margin-bottom: .5rem;
   color: var(--tertiary-color);
+  cursor: pointer;
 }
 
 .faq-list dt::before {
@@ -224,8 +225,7 @@ p, li, dd {
 }
 
 
-/* JS */
-
+/* JS - ANIMALS */
 .js-tabcontent section {
   display: none;
 }
@@ -244,4 +244,46 @@ p, li, dd {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
+}
+
+/* JS - FAQ */
+.js-accordion dd {
+  display: none;
+}
+
+.js-accordion dt::after {
+  content: '\2BAF';
+  margin-left: 10px;
+}
+
+.js-accordion dt.active::after {
+  content: '\2BAD';
+}
+
+.js-accordion dd.active {
+  display: block;
+  animation: slideDown .5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+
+/* JS - SCROLL ANIMATION */
+.js-scroll {
+  opacity: 0;
+  transform: translate3d(-20px, 0, 0);
+  transition: .3s;
+}
+
+.js-scroll.active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
