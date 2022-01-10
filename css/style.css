@@ -4,6 +4,7 @@
   --bg-color: #faf6ed;
   --main-color: #222;
   --secondary-color: #FB5;
+  --scrollbar-track: #f5e2c6;
   --tertiary-color: #e54
 }
 
@@ -101,8 +102,17 @@ p, li, dd {
 
 .animals-list {
   grid-column: 2;
-  height: 376px;
+  height: 379px;
   overflow-y: scroll;
+}
+
+.animals-list li {
+  cursor: pointer;
+  opacity: .99;
+}
+
+.animals-list li:hover {
+  opacity: 1;
 }
 
 .animals-list::-webkit-scrollbar {
@@ -112,11 +122,13 @@ p, li, dd {
 .animals-list::-webkit-scrollbar-thumb {
   background: var(--secondary-color);
   border-left: 4px solid var(--bg-color);
-  border-left: 4px solid var(--bg-color);
+  border-left: 4px solid var(--bg-color); 
 }
 
 .animals-list::-webkit-scrollbar-track {
-  background: var(--bg-color);
+  background: var(--scrollbar-track);
+  border-left: 4px solid var(--bg-color);
+  border-left: 4px solid var(--bg-color);
 }
 
 .animals-description {
@@ -208,5 +220,28 @@ p, li, dd {
   }
   .copy {
     margin-bottom: 0px;
+  }
+}
+
+
+/* JS */
+
+.js-tabcontent section {
+  display: none;
+}
+
+.js-tabcontent section.active {
+  display: block !important;
+  animation: show .5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-20px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }

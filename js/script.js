@@ -1,21 +1,19 @@
-// Return all images from the site on the console
-const imgs = document.querySelectorAll('img')
-console.log(imgs)
+const tabNav = document.querySelectorAll('.js-tabnav li')
+const tabContent = document.querySelectorAll('.js-tabcontent section')
 
-// Return on the console only the images that start with the word image
-const animalImages = document.querySelectorAll('[src^="img/img"]')
-console.log(animalImages)
+if (tabNav.length && tabContent.length) {
+  tabContent[0].classList.add('active')
 
-// Select all internal links (where the href begins with #)
-const internalLinks = document.querySelectorAll('[href^="#"]')
-console.log(internalLinks)
+  function activeTab(index) {
+    tabContent.forEach((section) => {
+      section.classList.remove('active')
+    })
+    tabContent[index].classList.add('active')
+  }
 
-// Select the first h2 inside of .animals-description
-const h2Animals = document.querySelector('.animals-description h2')
-console.log(h2Animals)
-
-// Select the last p of the site
-const paragraphs = document.querySelectorAll('p')
-console.log(paragraphs[--paragraphs.length])
-
-
+  tabNav.forEach((itemNav, index) => {
+    itemNav.addEventListener('click', () => {
+      activeTab(index)
+    })
+  })
+}
