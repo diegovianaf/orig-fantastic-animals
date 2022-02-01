@@ -81,10 +81,10 @@ function initScrollAnimation() {
       sections.forEach((section) => {
         const sectionTop = section.getBoundingClientRect().top
         const isSectionVisible = sectionTop - halfWindow <= 0
-          if(isSectionVisible)
-            section.classList.add('active')
-          else // optional
-            section.classList.remove('active') 
+        if(isSectionVisible)
+          section.classList.add('active')
+        else // optional
+          section.classList.remove('active') 
       })
     }
 

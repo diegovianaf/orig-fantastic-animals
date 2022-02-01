@@ -232,7 +232,7 @@ p, li, dd {
 
 .js-tabcontent section.active {
   display: block !important;
-  animation: show .5s forwards;
+  animation: show 500ms forwards;
 }
 
 @keyframes show {
@@ -247,7 +247,7 @@ p, li, dd {
 }
 
 /* JS - FAQ */
-.js-accordion dd {
+.js .js-accordion dd {
   display: none;
 }
 
@@ -262,7 +262,7 @@ p, li, dd {
 
 .js-accordion dd.active {
   display: block;
-  animation: slideDown .5s forwards;
+  animation: slideDown 500ms forwards;
 }
 
 @keyframes slideDown {
@@ -277,13 +277,13 @@ p, li, dd {
 }
 
 /* JS - SCROLL ANIMATION */
-.js-scroll {
+.js .js-scroll {
   opacity: 0;
   transform: translate3d(-20px, 0, 0);
-  transition: .3s;
+  transition: 300ms;
 }
 
-.js-scroll.active {
+.js .js-scroll.active {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
