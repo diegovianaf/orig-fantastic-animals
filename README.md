@@ -6,3 +6,6 @@ This project is being developed during the **JavaScript Course** at [Origamid](h
 - HTML
 - CSS
 - JavaScript
+
+## © License
+[MIT](https://github.com/diegovianaf/orig-fantastic-animals/blob/main/LICENSE)
