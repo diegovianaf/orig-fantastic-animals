@@ -14,7 +14,7 @@
 
 <body>
 
-  <nav class="navbar js-navbar">
+  <nav class="navbar" data-navbar="smooth">
     <ul>
       <li><a href="#animals">Animals</a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -23,9 +23,9 @@
     </ul>
   </nav>
 
-  <section class="grid-section animals js-scroll" id="animals">
+  <section class="grid-section animals" data-anime="scroll" id="animals">
     <h1 class="title">Fantastic Animals</h1>
-    <ul class="animals-list js-tabnav">
+    <ul class="animals-list" data-tab="navbar">
       <li>
         <img src="img/img-fox.jpg" alt="Fox">
       </li>
@@ -46,8 +46,8 @@
       </li>
     </ul>
 
-    <div class="animals-description js-tabcontent">
-      <section>
+    <div class="animals-description" data-tab="content">
+      <section data-anime="show-right">
         <h2>Fox</h2>
         <p>Foxes are small to medium-sized, omnivorous mammals belonging to several genera of the family Canidae. They have a flattened skull, upright triangular ears, a pointed, slightly upturned snout, and a long bushy tail (or brush).</p>
         <p>Twelve species belong to the monophyletic "true foxes" group of genus Vulpes. Approximately another 25 current or extinct species are always or sometimes called foxes.</p>
@@ -55,7 +55,7 @@
         <p>The global distribution of foxes, together with their widespread reputation for cunning, has contributed to their prominence in popular culture and folklore in many societies around the world.</p>
       </section>
 
-      <section>
+      <section data-anime="show-down">
         <h2>Squirrel</h2>
         <p>Squirrels are members of the family Sciuridae, a family that includes small or medium-size rodents.</p>
         <p>The squirrel family includes tree squirrels, ground squirrels, chipmunks, marmots (including groundhogs), flying squirrels, and prairie dogs amongst other rodents.</p>
@@ -63,7 +63,7 @@
         <p>The earliest known fossilized squirrels date from the Eocene epoch, and among other living rodent families, the squirrels are most closely related to the mountain beaver and to the dormice.</p>
       </section>
 
-      <section>
+      <section data-anime="show-right">
         <h2>Bear</h2>
         <p>Bears are carnivoran mammals of the family Ursidae. They are classified as caniforms, or doglike carnivorans.</p>
         <p>Although only eight species of bears are extant, they are widespread, appearing in a wide variety of habitats throughout the Northern Hemisphere and partially in the Southern Hemisphere.</p>
@@ -71,7 +71,7 @@
         <p>Common characteristics of modern bears include large bodies with stocky legs, long snouts, small rounded ears, shaggy hair, plantigrade paws with five nonretractile claws, and short tails.</p>
       </section>
 
-      <section>
+      <section data-anime="show-down">
         <h2>Wolf</h2>
         <p>The wolf (Canis lupus), also known as the gray wolf or grey wolf, is a large canine native to Eurasia and North America.</p>
         <p>More than thirty subspecies of Canis lupus have been recognized, and gray wolves, as popularly understood, comprise non-domestic/feral subspecies.</p>
@@ -81,7 +81,7 @@
         <p></p>
       </section>
 
-      <section>
+      <section data-anime="show-right">
         <h2>Mandrill</h2>
         <p>The mandrill (Mandrillus sphinx) is a primate of the Old World monkey (Cercopithecidae) family.</p>
         <p>It is one of two species in the genus Mandrillus, along with the drill. Although they superficially resemble baboons, they are more closely related to mangabeys of the genus Cercocebus.</p>
@@ -90,7 +90,7 @@
         <p>Mandrills are the world's largest monkeys. The mandrill is classified as vulnerable by IUCN.</p>
       </section>
 
-      <section>
+      <section data-anime="show-down">
         <h2>Lion</h2>
         <p>The lion (Panthera leo) is a large cat of the genus Panthera native to Africa and India. It has a muscular, deep-chested body, short, rounded head, round ears, and a hairy tuft at the end of its tail.</p>
         <p>It is sexually dimorphic; adult male lions are larger than females and have a prominent mane. It is a social species, forming groups called prides.</p>
@@ -101,24 +101,24 @@
     </div>
   </section>
 
-  <section class="grid-section faq js-scroll" id="faq">
+  <section class="grid-section faq" data-anime="scroll" id="faq">
     <h1 class="title">FAQ</h1>
-    <dl class="faq-list js-accordion">
+    <dl class="faq-list" data-anime="accordion">
       <dt>How old are the animals?</dt>
       <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum optio neque eligendi facilis laborum, sit voluptas corporis numquam officiis!</dd>
 
       <dt>Are they fantastic?</dt>
       <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo exercitationem velit veritatis atque fugit non aperiam. Quasi, error!</dd>
-
+      
       <dt>How are they different?</dt>
       <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptatum ratione, magnam rem non consequuntur accusamus eligendi voluptate unde dolorem officiis.</dd>
-
+      
       <dt>How to protect them?</dt>
       <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde blanditiis, distinctio alias nihil magni fugit quo vitae dolore iure laboriosam itaque asperiores voluptas.</dd>
     </dl>
   </section>
 
-  <section class="grid-section contact js-scroll" id="contact">
+  <section class="grid-section contact" data-anime="scroll" id="contact">
     <h1 class="title">Contact</h1>
     <div class="map">
       <img src="img/map.png" alt="Map">
