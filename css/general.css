@@ -46,7 +46,7 @@ p, li, dd {
 .navbar ul {
   display: flex;
   flex-wrap: wrap;
-  padding: 5px 10px ;
+  padding: 5px 10px;
   gap: 10px;
 }
 
