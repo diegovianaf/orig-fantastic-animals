@@ -4,7 +4,7 @@ export default function outsideClick(element, events, callback) {
 
   if(!element.hasAttribute(outside)) {
     events.forEach(userEvent => {
-      html.addEventListener(userEvent, handleOutsideClick)
+      setTimeout(() => html.addEventListener(userEvent, handleOutsideClick))
     })
     element.setAttribute(outside, '')
   }
@@ -21,3 +21,4 @@ export default function outsideClick(element, events, callback) {
 }
 
 // if (!... -> false
+// setTimeout(() => html.addEventListener(userEvent, handleOutsideClick)) -> usado para que o menu mobile funcione corretamente
