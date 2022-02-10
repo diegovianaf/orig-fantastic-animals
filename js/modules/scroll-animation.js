@@ -7,10 +7,12 @@ export default function initScrollAnimation() {
       sections.forEach((section) => {
         const sectionTop = section.getBoundingClientRect().top
         const isSectionVisible = sectionTop - halfWindow <= 0
-        if(isSectionVisible)
+        if (isSectionVisible)
           section.classList.add('active')
-        else // optional
-          section.classList.remove('active') 
+        else if (section.classList.contains('active')) {
+          section.classList.remove('active')
+        }
+           
       })
     }
 
