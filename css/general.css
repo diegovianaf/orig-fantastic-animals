@@ -321,3 +321,10 @@ p, li, dd {
 [data-week].opened::after {
   background: #3F4;
 }
+
+.btc-price {
+  background: #3F4;
+  padding: .2rem .5rem;
+  font-weight: bold;
+  border-radius: 2px;
+}
