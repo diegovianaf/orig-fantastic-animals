@@ -12,7 +12,7 @@ export default function initFetchAnimals() {
       })
       initAnimaNumbers()
     } catch(error) {
-      console.log(error)
+      console.log(Error(error))
     }
   }
 
