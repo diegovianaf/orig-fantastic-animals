@@ -1,4 +1,4 @@
-export default function InitOperating() {
+export default function initOperating() {
   const operating = document.querySelector('[data-week]')
   const weekDays = operating.dataset.week.split(',').map(Number)
   const dayTime = operating.dataset.time.split(',').map(Number)
