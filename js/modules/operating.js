@@ -10,7 +10,7 @@ export default function initOperating() {
   const weekOpened = weekDays.indexOf(dayNow) !== -1
   const timeOpened = (timeNow >= dayTime[0] && timeNow < dayTime[1])
 
-  if(weekOpened && timeOpened) {
+  if (weekOpened && timeOpened) {
     operating.classList.add('opened')
   }
 }
