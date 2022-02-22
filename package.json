@@ -4,7 +4,8 @@
   "description": "This project is being developed during the **JavaScript Course** at [Origamid](https://www.origamid.com/curso/javascript-completo-es6/).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development --watch ./js/script.js -o ./",
+    "build": "webpack --mode production ./js/script.js -o ./"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,8 @@
   "devDependencies": {
     "eslint": "^8.9.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.4"
+    "eslint-plugin-import": "^2.25.4",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
   }
 }
