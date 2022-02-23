@@ -8,15 +8,8 @@ export default function initSmoothScroll() {
     console.log(section);
     section.scrollIntoView({
       behavior: 'smooth',
-      // block: 'start',
+      block: 'start',
     })
-
-    // alternative way
-    /* const topo = section.offsetTop;
-      window.scrollTo({
-        top: topo,
-        behavior: 'smooth',
-    }); */
   }
 
   internalLinks.forEach((link) => {

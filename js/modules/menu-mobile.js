@@ -17,5 +17,3 @@ export default function initMenuMobile() {
     mainEvents.forEach((activity) => menuButton.addEventListener(activity, openMenu))
   }
 }
-
-// para que a funcao "outsideClick(menuList..." funcione, foi preciso adicionar um setTimeout no arquivo 'outsideClick.js'

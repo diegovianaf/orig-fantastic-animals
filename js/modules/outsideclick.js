@@ -19,6 +19,3 @@ export default function outsideClick(element, events, callback) {
     element.setAttribute(outside, '')
   }
 }
-
-// if (!... -> false
-// setTimeout(() => html.addEventListener(userEvent, handleOutsideClick)) -> usado para que o menu mobile funcione corretamente
