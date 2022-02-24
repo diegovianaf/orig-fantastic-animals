@@ -16,7 +16,7 @@ smoothScroll.init()
 const accordion = new Accordion('[data-anime="accordion"] dt')
 accordion.init()
 
-const tabNav = new TabNav('[data-tab="menu"] li', '[data-tab="content"] section')
+const tabNav = new TabNav('[data-tab="navbar"] li', '[data-tab="content"] section')
 tabNav.init()
 
 const modal = new Modal('[data-modal="open"]', '[data-modal="close"]', '[data-modal="container"]')
