@@ -5,7 +5,7 @@ import Modal from './modules/modal.js'
 import Tooltip from './modules/tooltip.js'
 import DropdownMenu from './modules/dropdown-menu.js'
 import MenuMobile from './modules/menu-mobile.js'
-import initOperating from './modules/operating.js'
+import StoreOperation from './modules/store-operation.js'
 import fetchAnimals from './modules/fetch-animals.js'
 import fetchBitcoin from './modules/fetch-bitcoin.js'
 import ScrollAnimation from './modules/scroll-animation.js'
@@ -34,7 +34,8 @@ dropdownMenu.init()
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]')
 menuMobile.init()
 
-initOperating()
+const storeOperation = new StoreOperation('[data-week]', 'open')
+storeOperation.init()
 
 fetchAnimals('../../animalsapi.json', '.numbers-grid')
 
