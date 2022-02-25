@@ -318,7 +318,7 @@ p, li, dd {
   border: 2px solid #000;
 }
 
-[data-week].opened::after {
+[data-week].open::after {
   background: #3F4;
 }
 
