@@ -8,7 +8,7 @@ import initMenuMobile from './modules/menu-mobile.js'
 import initOperating from './modules/operating.js'
 import fetchAnimals from './modules/fetch-animals.js'
 import fetchBitcoin from './modules/fetch-bitcoin.js'
-import initScrollAnimation from './modules/scroll-animation.js'
+import ScrollAnimation from './modules/scroll-animation.js'
 
 const smoothScroll = new SmoothScroll('[data-navbar="smooth"] a[href^="#"]')
 smoothScroll.init()
@@ -25,10 +25,13 @@ modal.init()
 const tooltip = new Tooltip('[data-toolTip]')
 tooltip.init()
 
+const scrollAnimation = new ScrollAnimation('[data-anime="scroll"]')
+scrollAnimation.init()
+
 initDropdownMenu()
 initMenuMobile()
 initOperating()
-initScrollAnimation()
 
 fetchAnimals('../../animalsapi.json', '.numbers-grid')
+
 fetchBitcoin('https://blockchain.info/ticker', '.btc-price')
