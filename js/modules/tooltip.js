@@ -1,42 +1,59 @@
-export default function initTooltip() {
-  const tooTips = document.querySelectorAll('[data-toolTip]')
+export default class Tooltip {
+  constructor(tooltips) {
+    this.tooltips = document.querySelectorAll(tooltips)
 
-  const onMouseMove = {
-    handleEvent(event) {
-      this.tooltipBox.style.top = `${event.pageY + 20}px`
+    // object bind from the class to the callbacks
+    this.onMouseLeave = this.onMouseLeave.bind(this)
+    this.onMouseMove = this.onMouseMove.bind(this)
+    this.onMouseOver = this.onMouseOver.bind(this)
+  }
+
+  // Moves the tooltip based on its styles according to the mouse position
+  onMouseMove(event) {
+    this.tooltipBox.style.top = `${event.pageY + 20}px`
+    if (event.pageX + 240 > window.innerWidth) {
+      this.tooltipBox.style.left = `${event.pageX - 190}px`
+    } else {
       this.tooltipBox.style.left = `${event.pageX + 20}px`
-    },
+    }
   }
 
-  const onMouseLeave = {
-    handleEvent() {
-      this.tooltipBox.remove()
-      this.element.removeEventListener('mouseleave', onMouseLeave)
-      this.element.removeEventListener('mousemove', onMouseMove)
-    },
+  // Removes the tooltip and the mousemove and mouseleave events
+  onMouseLeave({ currentTarget }) {
+    this.tooltipBox.remove()
+    currentTarget.removeEventListener('mouseleave', this.onMouseLeave)
+    currentTarget.removeEventListener('mousemove', this.onMouseMove)
   }
 
-  function createTooltipBox(element) {
+  // Creates the tooltip box and place it in the body
+  createTooltipBox(element) {
     const tooltipBox = document.createElement('div')
     const text = element.getAttribute('aria-label')
     tooltipBox.classList.add('tooltip')
     tooltipBox.innerText = text
     document.body.appendChild(tooltipBox)
-    return tooltipBox
+    this.tooltipBox = tooltipBox
   }
 
-  function onMouseOver() {
-    const tooltipBox = createTooltipBox(this)
-
-    onMouseMove.tooltipBox = tooltipBox
-    this.addEventListener('mousemove', onMouseMove)
-
-    onMouseLeave.tooltipBox = tooltipBox
-    onMouseLeave.element = this
-    this.addEventListener('mouseleave', onMouseLeave)
+  // Create the tooltip and add the mousemove and mouseleave events to the target
+  onMouseOver({ currentTarget }) {
+    // create the tooltipbox and puts it in a property
+    this.createTooltipBox(currentTarget)
+    currentTarget.addEventListener('mousemove', this.onMouseMove)
+    currentTarget.addEventListener('mouseleave', this.onMouseLeave)
   }
 
-  tooTips.forEach((item) => {
-    item.addEventListener('mouseover', onMouseOver)
-  })
+  // Add mouseover events to each tooltip
+  addTooltipsEvent() {
+    this.tooltips.forEach((item) => {
+      item.addEventListener('mouseover', this.onMouseOver)
+    })
+  }
+
+  init() {
+    if (this.tooltips.length) {
+      this.addTooltipsEvent()
+    }
+    return this
+  }
 }
