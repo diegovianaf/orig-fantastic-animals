@@ -37,6 +37,6 @@ menuMobile.init()
 const storeOperation = new StoreOperation('[data-week]', 'open')
 storeOperation.init()
 
-fetchAnimals('./animalsapi.json', '.numbers-grid')
+fetchAnimals('animalsapi.json', '.numbers-grid')
 
 fetchBitcoin('https://blockchain.info/ticker', '.btc-price')
