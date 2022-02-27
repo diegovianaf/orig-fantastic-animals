@@ -1,6 +1,6 @@
 # 🐿 Fantastic Animals
  
-This project is being developed during the **JavaScript Course** at [Origamid](https://www.origamid.com/curso/javascript-completo-es6/).
+This project was developed during the **JavaScript Course** at [Origamid](https://www.origamid.com/curso/javascript-completo-es6/).
 
 ## 🛠 Features
 - HTML
