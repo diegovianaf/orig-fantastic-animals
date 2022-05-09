@@ -1,4 +1,4 @@
-# Bikcraft
+# Fantastic Animals
 
 This project was developed during the JavaScript Course at [Origamid](https://www.origamid.com/curso/javascript-completo-es6/).
 
